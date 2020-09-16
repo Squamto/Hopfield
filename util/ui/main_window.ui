@@ -481,9 +481,9 @@ color: rgb(230, 230, 230);</string>
 }
 </string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,2">
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,1">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -511,7 +511,7 @@ color: rgb(230, 230, 230);</string>
          <number>0</number>
         </property>
         <property name="spacing">
-         <number>0</number>
+         <number>8</number>
         </property>
         <item row="1" column="2">
          <spacer name="verticalSpacer_7">
@@ -788,70 +788,6 @@ color: rgb(230, 230, 230);</string>
           </item>
          </layout>
         </item>
-        <item row="3" column="0">
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::MinimumExpanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="randomise_button">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>10</width>
-            <height>10</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Random</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <spacer name="verticalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::MinimumExpanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="8" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
@@ -881,38 +817,6 @@ color: rgb(230, 230, 230);</string>
            </size>
           </property>
          </spacer>
-        </item>
-        <item row="6" column="0">
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>1</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>10</width>
-            <height>10</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Reset</string>
-          </property>
-         </widget>
         </item>
         <item row="0" column="2">
          <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1,1,1,1,1,1">
@@ -1562,6 +1466,102 @@ color: rgb(230, 230, 230);</string>
           </property>
          </widget>
         </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="randomise_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Random</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>13</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Reset</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>13</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
@@ -1572,6 +1572,31 @@ color: rgb(230, 230, 230);</string>
         <property name="leftMargin">
          <number>0</number>
         </property>
+        <item>
+         <widget class="QFrame" name="spacer_01">
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>800</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="SaveStateWidget" name="frame_1">
           <property name="enabled">
@@ -1852,6 +1877,31 @@ color: rgb(230, 230, 230);</string>
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QFrame" name="spacer_02">
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>800</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
      </layout>
@@ -1867,13 +1917,97 @@ color: rgb(230, 230, 230);</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuWeights">
+    <property name="styleSheet">
+     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
+    </property>
+    <property name="title">
+     <string>Weights</string>
+    </property>
+    <addaction name="action_symmetric"/>
+    <addaction name="action_diagonal"/>
+    <addaction name="action_synchronous"/>
+   </widget>
+   <widget class="QMenu" name="menuExamples">
+    <property name="styleSheet">
+     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
+    </property>
+    <property name="title">
+     <string>Examples</string>
+    </property>
+    <addaction name="example_1"/>
+    <addaction name="example_2"/>
+    <addaction name="example_0"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="styleSheet">
+     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_save_as_image"/>
+   </widget>
+   <addaction name="menuWeights"/>
+   <addaction name="menuExamples"/>
+   <addaction name="menuFile"/>
   </widget>
+  <action name="action_save_as_image">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="action_symmetric">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Symmetric</string>
+   </property>
+  </action>
+  <action name="action_diagonal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Diagonal = 0</string>
+   </property>
+  </action>
+  <action name="action_synchronous">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Synchronous</string>
+   </property>
+  </action>
+  <action name="example_1">
+   <property name="text">
+    <string>Symmetric</string>
+   </property>
+  </action>
+  <action name="example_2">
+   <property name="text">
+    <string>Diagonal</string>
+   </property>
+  </action>
+  <action name="example_0">
+   <property name="text">
+    <string>Synchronous</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>NetworkWidget</class>
    <extends>QOpenGLWidget</extends>
-   <header location="global">hopfield_QTHelper</header>
+   <header location="global">util.hopfield_QTHelper</header>
    <slots>
     <signal>update_save()</signal>
     <signal>set_play(bool)</signal>
@@ -1896,12 +2030,17 @@ color: rgb(230, 230, 230);</string>
     <slot>show_save_state(int)</slot>
     <slot>delete_save(int)</slot>
     <slot>load_number()</slot>
+    <slot>toggle_symmetric(bool)</slot>
+    <slot>toggle_diagonal(bool)</slot>
+    <slot>toggle_synchronous(bool)</slot>
+    <slot>load_example()</slot>
+    <slot>make_image()</slot>
    </slots>
   </customwidget>
   <customwidget>
    <class>SaveStateWidget</class>
    <extends>QFrame</extends>
-   <header location="global">hopfield_save_state_widget</header>
+   <header location="global">util.widgets.hopfield_save_state_widget</header>
    <container>1</container>
    <slots>
     <signal>show_request(int)</signal>
@@ -1922,7 +2061,6 @@ color: rgb(230, 230, 230);</string>
   <tabstop>number_button_8</tabstop>
   <tabstop>number_button_9</tabstop>
   <tabstop>pushButton_3</tabstop>
-  <tabstop>pushButton_4</tabstop>
   <tabstop>noise_slider</tabstop>
   <tabstop>spinBox_2</tabstop>
  </tabstops>
@@ -3077,6 +3215,118 @@ color: rgb(230, 230, 230);</string>
     <hint type="destinationlabel">
      <x>532</x>
      <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_symmetric</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_symmetric(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_diagonal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_diagonal(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_synchronous</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_synchronous(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_0</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_1</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_2</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_save_as_image</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>make_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>298</y>
     </hint>
    </hints>
   </connection>
