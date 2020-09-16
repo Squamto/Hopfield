@@ -10,8 +10,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtOpenGL import *
 
-from save_state import Ui_SaveState
-from hopfield_QTHelper import NetworkWidget
+from util.ui.save_state import Ui_SaveState
+from util.hopfield_QTHelper import NetworkWidget
 
 from random import random
 

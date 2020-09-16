@@ -14,7 +14,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtOpenGL import *
 
-from hopfield_util import HopfieldNetwork, MNISTHandler, load_example
+from util.hopfield_util import HopfieldNetwork, MNISTHandler, load_example
 
 '''
 useOpenGl = True

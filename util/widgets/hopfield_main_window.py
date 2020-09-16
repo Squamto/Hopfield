@@ -5,13 +5,12 @@ from PyQt5 import QtGui
 from PyQt5 import QtWidgets
 from PyQt5 import QtOpenGL
 
-
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtOpenGL import *
 
-from test import Ui_MainWindow
+from util.ui.main_window import Ui_MainWindow
 
 
 class HopfieldMainWindow(QMainWindow):

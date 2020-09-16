@@ -5,7 +5,7 @@ import random
 
 
 class MNISTHandler:
-    file_names = {'images': "t10k-images.idx3-ubyte", 'labels': "t10k-labels.idx1-ubyte"}
+    file_names = {'images': "./util/mnist/t10k-images.idx3-ubyte", 'labels': "./util/mnist/t10k-labels.idx1-ubyte"}
 
     def __init__(self):
         self.files = {}

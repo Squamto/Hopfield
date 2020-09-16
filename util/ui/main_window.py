@@ -520,8 +520,8 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./ressources/media_play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("./ressources/pause.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap("./util/ressources/media_play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./util/ressources/pause.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.pushButton.setIcon(icon)
         self.pushButton.setCheckable(True)
         self.pushButton.setChecked(False)
@@ -535,7 +535,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setFont(font)
         self.pushButton_5.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./ressources/step.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./util/ressources/step.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon1)
         self.pushButton_5.setObjectName("pushButton_5")
         self.horizontalLayout_3.addWidget(self.pushButton_5)
@@ -1017,8 +1017,8 @@ class Ui_MainWindow(object):
         self.example_0.setText(_translate("MainWindow", "Synchronous"))
         self.example_3.setText(_translate("MainWindow", "\"Fake\"-Synchronous"))
         self.action_save_as_image.setText(_translate("MainWindow", "Save as Image"))
-from hopfield_QTHelper import NetworkWidget
-from hopfield_save_state_widget import SaveStateWidget
+from util.hopfield_QTHelper import NetworkWidget
+from util.widgets.hopfield_save_state_widget import SaveStateWidget
 
 
 if __name__ == "__main__":

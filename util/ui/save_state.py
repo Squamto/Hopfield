@@ -59,7 +59,7 @@ class Ui_SaveState(object):
         self.clear_button.setMaximumSize(QtCore.QSize(35, 35))
         self.clear_button.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./ressources/eye.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./util/ressources/eye.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.clear_button.setIcon(icon)
         self.clear_button.setIconSize(QtCore.QSize(24, 24))
         self.clear_button.setObjectName("clear_button")
@@ -74,7 +74,7 @@ class Ui_SaveState(object):
         self.view_button.setMaximumSize(QtCore.QSize(35, 35))
         self.view_button.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./ressources/clear.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./util/ressources/clear.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.view_button.setIcon(icon1)
         self.view_button.setIconSize(QtCore.QSize(24, 24))
         self.view_button.setObjectName("view_button")
@@ -89,7 +89,8 @@ class Ui_SaveState(object):
         _translate = QtCore.QCoreApplication.translate
         SaveState.setWindowTitle(_translate("SaveState", "Frame"))
         self.label.setText(_translate("SaveState", "-1"))
-from hopfield_QTHelper import NetworkSurfaceWidget
+
+from util.hopfield_QTHelper import NetworkSurfaceWidget
 
 
 if __name__ == "__main__":
