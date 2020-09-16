@@ -100,7 +100,7 @@ class NetworkSurfaceWidget(QWidget):
         painter.begin(pixmap)
         self.helper.draw(painter, QRect(), self.values, self.pos)
         painter.end()
-        print(pixmap.save("../img/" + now.strftime("%d%m%Y_%H%M%S" + ".png"), "png"))
+        print(pixmap.save("./img/" + now.strftime("%d%m%Y_%H%M%S" + ".png"), "png"))
         self.helper.resize(self.size())
 
     def resizeEvent(self, event):
