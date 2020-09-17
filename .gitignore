@@ -1,3 +1,5 @@
 img/*
 !img/example.png
-*.pyc
+__pycache__/
+*.py[cod]
+.vscode
