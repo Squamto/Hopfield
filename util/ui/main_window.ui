@@ -1356,8 +1356,8 @@ color: rgb(230, 230, 230);</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>ressources/media_play.png</normaloff>
-                <normalon>ressources/pause.ico</normalon>ressources/media_play.png</iconset>
+                <normaloff>util/ressources/media_play.png</normaloff>
+                <normalon>util/ressources/pause.ico</normalon>util/ressources/media_play.png</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -1381,7 +1381,7 @@ color: rgb(230, 230, 230);</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>ressources/step.svg</normaloff>ressources/step.svg</iconset>
+                <normaloff>util/ressources/step.svg</normaloff>util/ressources/step.svg</iconset>
               </property>
              </widget>
             </item>
