@@ -3,4 +3,3 @@ img/*
 __pycache__/
 *.py[cod]
 .vscode
-util/ui/__pycache__/main_window.cpython-38.pyc
