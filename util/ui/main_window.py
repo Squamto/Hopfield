@@ -936,6 +936,7 @@ from util.widgets.hopfield_save_state_widget import SaveStateWidget
 
 if __name__ == "__main__":
     import sys
+    QApplication.setStyle('Fusion')
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
