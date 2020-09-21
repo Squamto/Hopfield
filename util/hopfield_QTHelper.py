@@ -90,9 +90,17 @@ class NetworkSurfaceWidget(QWidget):
         painter.end()
         
     def save(self):
+        try:
+            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img", "PNG (*.png);;BMP (*.bmp)", "PNG (*.png)")
+            path = f[0]
+            if "bmp" in f[1]:
+                file_type = "bmp"
+        except Exception as e:
+            print(e)
+        if len(path) == 0:
+            return
         m = self.helper.show_marker
         self.helper.show_marker = False
-        now = datetime.now()
         x, y = self.size().width(), self.size().height()
         x = x - (x % self.values.shape[1])
         y = y - (y % self.values.shape[0])
@@ -103,7 +111,7 @@ class NetworkSurfaceWidget(QWidget):
         painter.begin(pixmap)
         self.helper.draw(painter, QRect(), self.values, self.pos)
         painter.end()
-        print(pixmap.save("./img/" + now.strftime("%d%m%Y_%H%M%S" + ".png"), "png"))
+        pixmap.save(path, file_type)
         self.helper.resize(self.size())
         self.helper.show_marker = m
 

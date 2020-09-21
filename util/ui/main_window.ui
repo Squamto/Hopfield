@@ -2262,8 +2262,8 @@ QPushButton:pressed{
    <slot>save()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>107</x>
-     <y>257</y>
+     <x>785</x>
+     <y>710</y>
     </hint>
     <hint type="destinationlabel">
      <x>396</x>
@@ -2310,8 +2310,8 @@ QPushButton:pressed{
    <slot>toggle_marker(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>259</x>
-     <y>663</y>
+     <x>298</x>
+     <y>705</y>
     </hint>
     <hint type="destinationlabel">
      <x>498</x>
@@ -2326,8 +2326,8 @@ QPushButton:pressed{
    <slot>swap_order(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>372</x>
-     <y>670</y>
+     <x>398</x>
+     <y>709</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -2342,12 +2342,12 @@ QPushButton:pressed{
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>512</x>
-     <y>665</y>
+     <x>538</x>
+     <y>707</y>
     </hint>
     <hint type="destinationlabel">
-     <x>472</x>
-     <y>665</y>
+     <x>498</x>
+     <y>707</y>
     </hint>
    </hints>
   </connection>
@@ -2358,8 +2358,8 @@ QPushButton:pressed{
    <slot>set_speed(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>512</x>
-     <y>665</y>
+     <x>538</x>
+     <y>707</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -2374,12 +2374,12 @@ QPushButton:pressed{
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>472</x>
-     <y>665</y>
+     <x>498</x>
+     <y>707</y>
     </hint>
     <hint type="destinationlabel">
-     <x>512</x>
-     <y>665</y>
+     <x>538</x>
+     <y>707</y>
     </hint>
    </hints>
   </connection>
@@ -2390,8 +2390,8 @@ QPushButton:pressed{
    <slot>set_speed(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>472</x>
-     <y>665</y>
+     <x>498</x>
+     <y>707</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -2406,8 +2406,8 @@ QPushButton:pressed{
    <slot>toggle_running(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>540</x>
-     <y>667</y>
+     <x>566</x>
+     <y>709</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -2422,8 +2422,8 @@ QPushButton:pressed{
    <slot>step()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>600</x>
-     <y>670</y>
+     <x>594</x>
+     <y>709</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -2762,8 +2762,8 @@ QPushButton:pressed{
      <y>472</y>
     </hint>
     <hint type="destinationlabel">
-     <x>540</x>
-     <y>667</y>
+     <x>566</x>
+     <y>709</y>
     </hint>
    </hints>
   </connection>
@@ -2934,8 +2934,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>71</x>
-     <y>480</y>
+     <x>86</x>
+     <y>562</y>
     </hint>
     <hint type="destinationlabel">
      <x>378</x>
@@ -2998,8 +2998,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>45</x>
-     <y>242</y>
+     <x>52</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
      <x>332</x>
@@ -3014,8 +3014,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>71</x>
-     <y>242</y>
+     <x>86</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
      <x>372</x>
@@ -3030,8 +3030,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>108</x>
-     <y>242</y>
+     <x>119</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -3046,8 +3046,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>45</x>
-     <y>361</y>
+     <x>52</x>
+     <y>430</y>
     </hint>
     <hint type="destinationlabel">
      <x>452</x>
@@ -3062,8 +3062,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>71</x>
-     <y>361</y>
+     <x>86</x>
+     <y>430</y>
     </hint>
     <hint type="destinationlabel">
      <x>488</x>
@@ -3078,8 +3078,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>108</x>
-     <y>361</y>
+     <x>119</x>
+     <y>430</y>
     </hint>
     <hint type="destinationlabel">
      <x>532</x>
@@ -3210,8 +3210,8 @@ QPushButton:pressed{
      <y>445</y>
     </hint>
     <hint type="destinationlabel">
-     <x>97</x>
-     <y>667</y>
+     <x>98</x>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -3222,8 +3222,8 @@ QPushButton:pressed{
    <slot>complete_iteration()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>620</x>
-     <y>644</y>
+     <x>622</x>
+     <y>709</y>
     </hint>
     <hint type="destinationlabel">
      <x>632</x>
@@ -3238,12 +3238,12 @@ QPushButton:pressed{
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>87</y>
+     <x>69</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
-     <x>66</x>
-     <y>87</y>
+     <x>118</x>
+     <y>90</y>
     </hint>
    </hints>
   </connection>
@@ -3254,12 +3254,12 @@ QPushButton:pressed{
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>87</y>
+     <x>118</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
-     <x>112</x>
-     <y>87</y>
+     <x>69</x>
+     <y>90</y>
     </hint>
    </hints>
   </connection>
@@ -3270,12 +3270,12 @@ QPushButton:pressed{
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>87</y>
+     <x>69</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
-     <x>112</x>
-     <y>87</y>
+     <x>69</x>
+     <y>90</y>
     </hint>
    </hints>
   </connection>
@@ -3286,12 +3286,12 @@ QPushButton:pressed{
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>87</y>
+     <x>118</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
-     <x>66</x>
-     <y>87</y>
+     <x>118</x>
+     <y>90</y>
     </hint>
    </hints>
   </connection>
@@ -3302,8 +3302,8 @@ QPushButton:pressed{
    <slot>draw(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>75</y>
+     <x>69</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
      <x>233</x>
@@ -3318,8 +3318,8 @@ QPushButton:pressed{
    <slot>erase(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>87</y>
+     <x>118</x>
+     <y>90</y>
     </hint>
     <hint type="destinationlabel">
      <x>218</x>
@@ -3382,8 +3382,8 @@ QPushButton:pressed{
    <slot>noise()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>108</x>
-     <y>241</y>
+     <x>118</x>
+     <y>404</y>
     </hint>
     <hint type="destinationlabel">
      <x>259</x>
@@ -3398,12 +3398,12 @@ QPushButton:pressed{
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>67</x>
-     <y>383</y>
+     <x>85</x>
+     <y>483</y>
     </hint>
     <hint type="destinationlabel">
-     <x>71</x>
-     <y>476</y>
+     <x>89</x>
+     <y>572</y>
     </hint>
    </hints>
   </connection>
@@ -3414,12 +3414,12 @@ QPushButton:pressed{
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>82</x>
-     <y>473</y>
+     <x>100</x>
+     <y>572</y>
     </hint>
     <hint type="destinationlabel">
-     <x>84</x>
-     <y>372</y>
+     <x>102</x>
+     <y>483</y>
     </hint>
    </hints>
   </connection>
@@ -3430,8 +3430,8 @@ QPushButton:pressed{
    <slot>set_noise_value(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>477</y>
+     <x>118</x>
+     <y>572</y>
     </hint>
     <hint type="destinationlabel">
      <x>235</x>
@@ -3446,8 +3446,8 @@ QPushButton:pressed{
    <slot>noise()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>104</x>
-     <y>208</y>
+     <x>118</x>
+     <y>408</y>
     </hint>
     <hint type="destinationlabel">
      <x>305</x>
@@ -3462,12 +3462,12 @@ QPushButton:pressed{
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>51</x>
-     <y>365</y>
+     <x>69</x>
+     <y>486</y>
     </hint>
     <hint type="destinationlabel">
-     <x>51</x>
-     <y>469</y>
+     <x>69</x>
+     <y>574</y>
     </hint>
    </hints>
   </connection>
@@ -3482,8 +3482,8 @@ QPushButton:pressed{
      <y>451</y>
     </hint>
     <hint type="destinationlabel">
-     <x>85</x>
-     <y>360</y>
+     <x>103</x>
+     <y>486</y>
     </hint>
    </hints>
   </connection>
@@ -3494,8 +3494,8 @@ QPushButton:pressed{
    <slot>set_noise_value(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>466</y>
+     <x>118</x>
+     <y>574</y>
     </hint>
     <hint type="destinationlabel">
      <x>311</x>
@@ -3510,8 +3510,8 @@ QPushButton:pressed{
    <slot>invert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>102</x>
-     <y>105</y>
+     <x>118</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
      <x>182</x>
