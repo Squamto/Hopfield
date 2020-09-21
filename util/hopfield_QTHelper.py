@@ -142,8 +142,10 @@ class NetworkWidget(QWidget):
         self.timer.timeout.connect(self.go)
 
         self.noise_value = 0.3
+        #1: white, -1: black
+        self.draw_color = 1
+        #0:point, 1:circle, 2:line
         self.draw_mode = 0
-        self.inpainting = False
 
         self.sym_action = None
         self.diag_action = None
@@ -194,12 +196,18 @@ class NetworkWidget(QWidget):
         self.update()
 
     def draw(self):
-        self.draw_mode = 1
+        self.draw_color = 1
         self.update()
 
     def erase(self):
-        self.draw_mode = -1
+        self.draw_color = -1
         self.update()
+
+    def set_draw_color(self, a : bool):
+        self.draw_color = -1 if a else 1
+
+    def set_draw_mode(self, idx : int):
+        self.draw_mode = idx
 
     def toggle_inpaint(self, a : bool):
         self.inpainting = a
@@ -207,6 +215,10 @@ class NetworkWidget(QWidget):
 
     def noise(self):
         self.network.noise_values(self.noise_value)
+        self.update()
+
+    def invert(self):
+        self.network.values *= -1
         self.update()
 
     def step(self):
@@ -284,6 +296,12 @@ class NetworkWidget(QWidget):
             if self.surface.helper.y0 < y < self.surface.helper.yl:
                 self.draw_to_network((x, y))
 
+    def mousePressEvent(self, event : QMouseEvent):
+        x, y = event.pos().x(), event.pos().y()
+        if self.surface.helper.x0 < x < self.surface.helper.xl:
+            if self.surface.helper.y0 < y < self.surface.helper.yl:
+                self.draw_to_network((x, y))
+
     def resizeEvent(self, event):
         super().resizeEvent(event)
         self.surface.resize(self.size())
@@ -295,16 +313,14 @@ class NetworkWidget(QWidget):
         self.update_steps()
         return super().update()
 
-    def mousePressEvent(self, event : QMouseEvent):
-        x, y = event.pos().x(), event.pos().y()
-        if self.surface.helper.x0 < x < self.surface.helper.xl:
-            if self.surface.helper.y0 < y < self.surface.helper.yl:
-                self.draw_to_network((x, y))
-
     def draw_to_network(self, pos : tuple):
-        x, y = pos
-        if self.inpainting:
-            self.network.values[int((y - self.surface.helper.y0) / self.surface.helper.rect_size)] = self.draw_mode
-        else:
-            self.network.values[(int((y - self.surface.helper.y0) / self.surface.helper.rect_size), int((x - self.surface.helper.x0) / self.surface.helper.rect_size))] = self.draw_mode
+        y, x = (int((pos[1] - self.surface.helper.y0) / self.surface.helper.rect_size), int((pos[0] - self.surface.helper.x0) / self.surface.helper.rect_size))
+        if self.draw_mode == 0:
+            self.network.values[y, x] = self.draw_color
+        elif self.draw_mode == 1:
+            self.network.values[max(0,y-2):y+3, max(0,x-2):x+3] = self.draw_color
+        elif self.draw_mode == 2:
+            self.network.values[y] = self.draw_color
+        elif self.draw_mode == 3:
+            self.network.values = numpy.ones(self.network.network_size) * self.draw_color
         self.update()
