@@ -170,10 +170,14 @@ class NetworkWidget(QWidget):
     def random(self):
         self.network.randomise_weights()
         self.update_save_states()
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def clear(self):
         self.network.clear_values()
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def save(self):
@@ -181,6 +185,8 @@ class NetworkWidget(QWidget):
             self.network.save_state()
             self.network.calculate_weights()
             self.update_save_states()
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def make_image(self):
@@ -193,6 +199,8 @@ class NetworkWidget(QWidget):
     def reset(self):
         self.network.clear_weights_and_savedstates()
         self.update_save_states()
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def draw(self):
@@ -209,16 +217,16 @@ class NetworkWidget(QWidget):
     def set_draw_mode(self, idx : int):
         self.draw_mode = idx
 
-    def toggle_inpaint(self, a : bool):
-        self.inpainting = a
-        self.update()
-
     def noise(self):
         self.network.noise_values(self.noise_value)
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def invert(self):
         self.network.values *= -1
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def step(self):
@@ -252,29 +260,41 @@ class NetworkWidget(QWidget):
         self.toggle_running(False)
         self.network.values = self.network.saved_states[idx].copy()
         self.set_play.emit(False)
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def delete_save(self, idx : int):
         self.network.remove_saved_state(idx)
         self.update_save_states()
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def load_number(self):
         number = int(self.sender().objectName().split('_')[2])
         self.network.load_image(self.images[number][self.image_indizes[number]])
         self.image_indizes[number] = (self.image_indizes[number] + 1) % self.max_images
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def toggle_symmetric(self, a : bool):
         self.network.weights.symetric = not self.network.weights.symetric
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def toggle_diagonal(self, a : bool):
         self.network.weights.zero_diagonal = not self.network.weights.zero_diagonal
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def toggle_synchronous(self, a : bool):
         self.network.set_sync(a)
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def load_example(self):
@@ -283,6 +303,8 @@ class NetworkWidget(QWidget):
         self.sym_action.setChecked(self.network.weights.symetric)
         self.diag_action.setChecked(self.network.weights.zero_diagonal)
         self.sync_action.setChecked(self.network.sync)
+        self.steps = 0
+        self.network.remaining_indizes = []
         self.update()
 
     def update_steps(self):
@@ -314,6 +336,8 @@ class NetworkWidget(QWidget):
         return super().update()
 
     def draw_to_network(self, pos : tuple):
+        self.steps = 0
+        self.network.remaining_indizes = []
         y, x = (int((pos[1] - self.surface.helper.y0) / self.surface.helper.rect_size), int((pos[0] - self.surface.helper.x0) / self.surface.helper.rect_size))
         if self.draw_mode == 0:
             self.network.values[y, x] = self.draw_color
