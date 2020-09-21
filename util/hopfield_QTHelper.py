@@ -90,6 +90,7 @@ class NetworkSurfaceWidget(QWidget):
         painter.end()
         
     def save(self):
+        file_type = "png"
         try:
             f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img", "PNG (*.png);;BMP (*.bmp)", "PNG (*.png)")
             path = f[0]
