@@ -90,6 +90,8 @@ class NetworkSurfaceWidget(QWidget):
         painter.end()
         
     def save(self):
+        m = self.helper.show_marker
+        self.helper.show_marker = False
         now = datetime.now()
         x, y = self.size().width(), self.size().height()
         x = x - (x % self.values.shape[1])
@@ -103,6 +105,7 @@ class NetworkSurfaceWidget(QWidget):
         painter.end()
         print(pixmap.save("./img/" + now.strftime("%d%m%Y_%H%M%S" + ".png"), "png"))
         self.helper.resize(self.size())
+        self.helper.show_marker = m
 
     def resizeEvent(self, event):
         self.helper.resize(event.size())
@@ -114,8 +117,11 @@ class NetworkWidget(QWidget):
 
     set_play = pyqtSignal(bool)
 
+    update_step_label = pyqtSignal(str)
+
     def __init__(self, parent = None):
         QGLWidget.__init__(self, parent)
+        self.steps = 0
         self.network = HopfieldNetwork(random=True)
         self.network.randomise_values()
         self.network.order = 2
@@ -135,7 +141,7 @@ class NetworkWidget(QWidget):
         self.timer = QTimer()
         self.timer.timeout.connect(self.go)
 
-        self.noise_value = 0
+        self.noise_value = 0.3
         self.draw_mode = 0
         self.inpainting = False
 
@@ -145,6 +151,7 @@ class NetworkWidget(QWidget):
 
     def go(self):
         self.network.iterate()
+        self.steps += self.network.step_size
         self.update()
 
     def toggle_running(self, a : bool):
@@ -186,18 +193,16 @@ class NetworkWidget(QWidget):
         self.update_save_states()
         self.update()
 
-    def draw(self, a : bool):
-        if a:
-            self.draw_mode = 1
+    def draw(self):
+        self.draw_mode = 1
+        self.update()
+
+    def erase(self):
+        self.draw_mode = -1
         self.update()
 
     def toggle_inpaint(self, a : bool):
         self.inpainting = a
-        self.update()
-
-    def erase(self, a : bool):
-        if a:
-            self.draw_mode = -1
         self.update()
 
     def noise(self):
@@ -207,9 +212,17 @@ class NetworkWidget(QWidget):
     def step(self):
         s = self.network.step_size
         self.network.step_size = 1
-        self.network.iterate()
+        self.go()
         self.network.step_size = s
-        self.update()
+
+    def complete_iteration(self):
+        s = self.network.step_size
+        self.network.step_size = 1
+        self.go()
+        while len(self.network.remaining_indizes) > 0:
+            self.go()
+        
+        self.network.step_size = s
 
     def set_speed(self, speed : int):
         self.network.step_size = speed
@@ -260,6 +273,11 @@ class NetworkWidget(QWidget):
         self.sync_action.setChecked(self.network.sync)
         self.update()
 
+    def update_steps(self):
+        s = self.steps / (self.network.w * self.network.h)
+        string = " : ".join([str(self.steps), f"{s:.3f}"])
+        self.update_step_label.emit(string)
+
     def mouseMoveEvent(self, event : QMoveEvent):
         x, y = event.pos().x(), event.pos().y()
         if self.surface.helper.x0 < x < self.surface.helper.xl:
@@ -274,6 +292,7 @@ class NetworkWidget(QWidget):
     def update(self):
         self.surface.update_values(self.network.values, (self.network.current_x, self.network.current_y))
         self.surface.update()
+        self.update_steps()
         return super().update()
 
     def mousePressEvent(self, event : QMouseEvent):
