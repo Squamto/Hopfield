@@ -67,18 +67,19 @@ class MNISTHandler:
 
 
 class NewWeightContainer(numpy.ndarray):
-    def __new__(cls, size, random=False, ex=False):
+    def __new__(cls, size, random=False, ex=True):
         arr = numpy.empty((size, size), dtype=float)
         if random:
             if ex:
-                arr = numpy.random.random((size, size))
+                arr = numpy.random.random((size, size)) - 0.5
             else:
                 for x in range(size):
                     arr[numpy.arange(x), x] = numpy.random.random(x) - 0.5
 
         arr = arr.view(cls)
-        arr.symetric = True
-        arr.zero_diagonal = True
+        if not ex:
+            arr.symetric = True
+            arr.zero_diagonal = True
         return arr
 
     def __array_finalize__(self, obj):

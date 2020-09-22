@@ -92,10 +92,12 @@ class NetworkSurfaceWidget(QWidget):
     def save(self):
         file_type = "png"
         try:
-            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img", "PNG (*.png);;BMP (*.bmp)", "PNG (*.png)")
+            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img", "PNG (*.png);;BMP (*.bmp);;JPG (*.jpg)", "PNG (*.png)")
             path = f[0]
             if "bmp" in f[1]:
                 file_type = "bmp"
+            elif "jpg" in f[1]:
+                file_type = "jpg"
         except Exception as e:
             print(e)
         if len(path) == 0:
@@ -156,9 +158,9 @@ class NetworkWidget(QWidget):
         #0:point, 1:circle, 2:line
         self.draw_mode = 0
 
-        self.sym_action = None
-        self.diag_action = None
-        self.sync_action = None
+        self.sym_check = None
+        self.diag_check = None
+        self.async_check = None
 
     def go(self):
         self.network.iterate()
@@ -300,8 +302,8 @@ class NetworkWidget(QWidget):
         self.network.remaining_indizes = []
         self.update()
 
-    def toggle_synchronous(self, a : bool):
-        self.network.set_sync(a)
+    def toggle_asynchronous(self, a : bool):
+        self.network.set_sync(not a)
         self.steps = 0
         self.network.remaining_indizes = []
         self.update()
@@ -309,9 +311,9 @@ class NetworkWidget(QWidget):
     def load_example(self):
         idx = int(self.sender().objectName().split('_')[1])
         load_example(self.network, idx)
-        self.sym_action.setChecked(self.network.weights.symetric)
-        self.diag_action.setChecked(self.network.weights.zero_diagonal)
-        self.sync_action.setChecked(self.network.sync)
+        self.sym_check.setChecked(self.network.weights.symetric)
+        self.diag_check.setChecked(self.network.weights.zero_diagonal)
+        self.async_check.setChecked(not self.network.sync)
         self.steps = 0
         self.network.remaining_indizes = []
         self.update()

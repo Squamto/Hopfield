@@ -452,6 +452,13 @@
     </disabled>
    </palette>
   </property>
+  <property name="font">
+   <font>
+    <family>MS Shell Dlg 2</family>
+    <pointsize>10</pointsize>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
@@ -475,6 +482,11 @@ color: rgb(230, 230, 230);</string>
      <height>600</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 	background-color: rgb(100, 100, 100);
@@ -496,6 +508,11 @@ color: rgb(230, 230, 230);</string>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="font">
+       <font>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::West</enum>
       </property>
@@ -503,11 +520,11 @@ color: rgb(230, 230, 230);</string>
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="tab_draw">
        <attribute name="title">
-        <string>Draw01</string>
+        <string>Draw</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0">
@@ -529,6 +546,7 @@ color: rgb(230, 230, 230);</string>
             <pointsize>10</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <item>
@@ -574,6 +592,11 @@ color: rgb(230, 230, 230);</string>
               <width>50</width>
               <height>50</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
@@ -626,9 +649,10 @@ QPushButton:pressed{
             </property>
             <property name="font">
              <font>
-              <pointsize>14</pointsize>
+              <pointsize>12</pointsize>
               <weight>75</weight>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="contextMenuPolicy">
@@ -661,9 +685,10 @@ QPushButton:pressed{
             </property>
             <property name="font">
              <font>
-              <pointsize>14</pointsize>
+              <pointsize>12</pointsize>
               <weight>75</weight>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="contextMenuPolicy">
@@ -687,6 +712,11 @@ QPushButton:pressed{
               <width>100</width>
               <height>20</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
             </property>
             <property name="maximum">
              <number>100</number>
@@ -713,272 +743,10 @@ QPushButton:pressed{
               <height>30</height>
              </size>
             </property>
-            <property name="suffix">
-             <string>%</string>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="singleStep">
-             <number>10</number>
-            </property>
-            <property name="stepType">
-             <enum>QAbstractSpinBox::DefaultStepType</enum>
-            </property>
-            <property name="value">
-             <number>30</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_draw">
-       <attribute name="title">
-        <string>Draw02</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QComboBox" name="comboBox_2">
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <item>
-           <property name="text">
-            <string>Point</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Square</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Line</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Fill</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QPushButton" name="pushButton_7">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 255);
-}
-
-QPushButton:hover{
-	background-color: #cccccc;
-}
-
-QPushButton:disabled{
-	border: 2px solid;
-	border-color: rgb(0, 0, 0);
-}
-
-QPushButton:pressed{
-	background-color: rgb(100, 100, 100);
-}d</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_9">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	background-color: #000000;
-}
-
-QPushButton:disabled{
-	border: 2px solid;
-	border-color: #FFFFFF;
-}
-
-QPushButton:hover{
-	background-color: #0a0a0a;
-}
-
-QPushButton:pressed{
-	background-color: rgb(100, 100, 100);
-}r</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_7" stretch="2,2,1,1">
-          <item>
-           <widget class="QPushButton" name="pushButton_21">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>10</width>
-              <height>10</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>100</width>
-              <height>100</height>
-             </size>
-            </property>
             <property name="font">
              <font>
-              <pointsize>14</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
-            </property>
-            <property name="contextMenuPolicy">
-             <enum>Qt::PreventContextMenu</enum>
-            </property>
-            <property name="text">
-             <string>Invert</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_19">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>10</width>
-              <height>10</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>100</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>14</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="contextMenuPolicy">
-             <enum>Qt::PreventContextMenu</enum>
-            </property>
-            <property name="text">
-             <string>Noise</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSlider" name="noise_slider_4">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>100</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="value">
-             <number>30</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinBox_5">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>100</width>
-              <height>30</height>
-             </size>
             </property>
             <property name="suffix">
              <string>%</string>
@@ -1012,167 +780,7 @@ QPushButton:pressed{
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="number_button_9">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>9</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="number_button_3">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="number_button_1">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="number_button_6">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>6</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="number_button_5">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>5</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
+        <item row="4" column="1">
          <widget class="QPushButton" name="number_button_8">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1197,6 +805,7 @@ QPushButton:pressed{
             <pointsize>14</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="text">
@@ -1204,71 +813,7 @@ QPushButton:pressed{
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="number_button_7">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>7</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="number_button_4">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>4</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
+        <item row="1" column="1">
          <widget class="QPushButton" name="number_button_2">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1293,6 +838,7 @@ QPushButton:pressed{
             <pointsize>14</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="text">
@@ -1300,7 +846,139 @@ QPushButton:pressed{
           </property>
          </widget>
         </item>
-        <item row="3" column="1">
+        <item row="3" column="0">
+         <widget class="QPushButton" name="number_button_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="number_button_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="number_button_1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="number_button_9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
          <widget class="QPushButton" name="number_button_0">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1325,12 +1003,318 @@ QPushButton:pressed{
             <pointsize>14</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="text">
            <string>0</string>
           </property>
          </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="number_button_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="number_button_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="number_button_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="2">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_properties">
+       <attribute name="title">
+        <string>Properties</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QCheckBox" name="sym_check">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Symmetric</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="diag_check">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Diagonal = 0</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="async_check">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Asynchrounous</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>22</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Examples</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="example_1">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Asymmetric</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="example_2">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Diagonal</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="example_0">
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Synchronous</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>364</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -1340,6 +1324,12 @@ QPushButton:pressed{
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
         <property name="text">
          <string>Steps : Iterations</string>
         </property>
@@ -1350,8 +1340,14 @@ QPushButton:pressed{
       </item>
       <item>
        <widget class="QLabel" name="step_label">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
         <property name="text">
-         <string>0 : 0</string>
+         <string>0 : 0.000</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1386,6 +1382,12 @@ QPushButton:pressed{
         <height>10</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
      </widget>
     </item>
     <item row="1" column="1">
@@ -1418,6 +1420,8 @@ QPushButton:pressed{
         </property>
         <property name="font">
          <font>
+          <pointsize>10</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
           <kerning>true</kerning>
          </font>
         </property>
@@ -1444,10 +1448,15 @@ QPushButton:pressed{
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <property name="spacing">
-         <number>0</number>
+         <number>3</number>
         </property>
         <item>
          <spacer name="horizontalSpacer_3">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -1464,6 +1473,12 @@ QPushButton:pressed{
         </item>
         <item>
          <widget class="QCheckBox" name="checkBox_2">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="text">
            <string>Show Marker</string>
           </property>
@@ -1482,9 +1497,10 @@ QPushButton:pressed{
           </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>8</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="currentIndex">
@@ -1530,6 +1546,11 @@ QPushButton:pressed{
             <height>20</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="maximum">
            <number>300</number>
           </property>
@@ -1555,6 +1576,12 @@ QPushButton:pressed{
             <height>20</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="maximum">
            <number>300</number>
           </property>
@@ -1570,6 +1597,7 @@ QPushButton:pressed{
             <pointsize>14</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="text">
@@ -1595,6 +1623,7 @@ QPushButton:pressed{
             <pointsize>14</pointsize>
             <weight>75</weight>
             <bold>true</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
           <property name="text">
@@ -1608,6 +1637,11 @@ QPushButton:pressed{
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_6">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -1615,10 +1649,21 @@ QPushButton:pressed{
            <iconset>
             <normaloff>../ressources/iterate.svg</normaloff>../ressources/iterate.svg</iconset>
           </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeatInterval">
+           <number>300</number>
+          </property>
          </widget>
         </item>
         <item>
          <spacer name="horizontalSpacer_4">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -2013,9 +2058,10 @@ QPushButton:pressed{
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -2045,9 +2091,10 @@ QPushButton:pressed{
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -2077,9 +2124,10 @@ QPushButton:pressed{
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -2100,89 +2148,20 @@ QPushButton:pressed{
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuWeights">
-    <property name="styleSheet">
-     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
-    </property>
-    <property name="title">
-     <string>Weights</string>
-    </property>
-    <addaction name="action_symmetric"/>
-    <addaction name="action_diagonal"/>
-    <addaction name="action_synchronous"/>
-   </widget>
-   <widget class="QMenu" name="menuExamples">
-    <property name="styleSheet">
-     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
-    </property>
-    <property name="title">
-     <string>Examples</string>
-    </property>
-    <addaction name="example_1"/>
-    <addaction name="example_2"/>
-    <addaction name="example_0"/>
-   </widget>
    <widget class="QMenu" name="menuFile">
-    <property name="styleSheet">
-     <string notr="true">selection-background-color: rgb(77, 77, 77);</string>
-    </property>
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="action_save_as_image"/>
+    <addaction name="action_save"/>
    </widget>
-   <addaction name="menuWeights"/>
-   <addaction name="menuExamples"/>
    <addaction name="menuFile"/>
   </widget>
-  <action name="action_save_as_image">
+  <action name="action_save">
    <property name="text">
     <string>Save</string>
    </property>
-  </action>
-  <action name="action_symmetric">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Symmetric</string>
-   </property>
-  </action>
-  <action name="action_diagonal">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Diagonal = 0</string>
-   </property>
-  </action>
-  <action name="action_synchronous">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Synchronous</string>
-   </property>
-  </action>
-  <action name="example_1">
-   <property name="text">
-    <string>Symmetric</string>
-   </property>
-  </action>
-  <action name="example_2">
-   <property name="text">
-    <string>Diagonal</string>
-   </property>
-  </action>
-  <action name="example_0">
-   <property name="text">
-    <string>Synchronous</string>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
  </widget>
@@ -2216,7 +2195,7 @@ QPushButton:pressed{
     <slot>load_number()</slot>
     <slot>toggle_symmetric(bool)</slot>
     <slot>toggle_diagonal(bool)</slot>
-    <slot>toggle_synchronous(bool)</slot>
+    <slot>toggle_asynchronous(bool)</slot>
     <slot>load_example()</slot>
     <slot>make_image()</slot>
     <slot>complete_iteration()</slot>
@@ -2422,7 +2401,7 @@ QPushButton:pressed{
    <slot>step()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>594</x>
+     <x>623</x>
      <y>709</y>
     </hint>
     <hint type="destinationlabel">
@@ -2934,8 +2913,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>86</x>
-     <y>562</y>
+     <x>96</x>
+     <y>558</y>
     </hint>
     <hint type="destinationlabel">
      <x>378</x>
@@ -2998,8 +2977,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>52</x>
-     <y>298</y>
+     <x>58</x>
+     <y>296</y>
     </hint>
     <hint type="destinationlabel">
      <x>332</x>
@@ -3014,8 +2993,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>86</x>
-     <y>298</y>
+     <x>96</x>
+     <y>296</y>
     </hint>
     <hint type="destinationlabel">
      <x>372</x>
@@ -3030,8 +3009,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>298</y>
+     <x>135</x>
+     <y>296</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -3046,8 +3025,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>52</x>
-     <y>430</y>
+     <x>58</x>
+     <y>427</y>
     </hint>
     <hint type="destinationlabel">
      <x>452</x>
@@ -3062,8 +3041,8 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>86</x>
-     <y>430</y>
+     <x>96</x>
+     <y>427</y>
     </hint>
     <hint type="destinationlabel">
      <x>488</x>
@@ -3078,124 +3057,12 @@ QPushButton:pressed{
    <slot>load_number()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>430</y>
+     <x>135</x>
+     <y>427</y>
     </hint>
     <hint type="destinationlabel">
      <x>532</x>
      <y>91</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>action_symmetric</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>toggle_symmetric(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>action_diagonal</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>toggle_diagonal(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>action_synchronous</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>toggle_synchronous(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>example_0</sender>
-   <signal>triggered()</signal>
-   <receiver>networkWidget</receiver>
-   <slot>load_example()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>example_1</sender>
-   <signal>triggered()</signal>
-   <receiver>networkWidget</receiver>
-   <slot>load_example()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>example_2</sender>
-   <signal>triggered()</signal>
-   <receiver>networkWidget</receiver>
-   <slot>load_example()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>action_save_as_image</sender>
-   <signal>triggered()</signal>
-   <receiver>networkWidget</receiver>
-   <slot>make_image()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>355</x>
-     <y>298</y>
     </hint>
    </hints>
   </connection>
@@ -3222,124 +3089,12 @@ QPushButton:pressed{
    <slot>complete_iteration()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>622</x>
+     <x>654</x>
      <y>709</y>
     </hint>
     <hint type="destinationlabel">
      <x>632</x>
      <y>503</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_7</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton_9</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>69</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>118</x>
-     <y>90</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_9</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton_7</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>90</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_7</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton_7</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>69</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>90</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_9</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton_9</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>118</x>
-     <y>90</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_7</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>draw(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>69</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>233</x>
-     <y>75</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_9</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>erase(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>90</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>218</x>
-     <y>389</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>comboBox_2</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>set_draw_mode(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>112</x>
-     <y>51</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>221</x>
-     <y>148</y>
     </hint>
    </hints>
   </connection>
@@ -3440,70 +3195,6 @@ QPushButton:pressed{
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_19</sender>
-   <signal>clicked()</signal>
-   <receiver>networkWidget</receiver>
-   <slot>noise()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>408</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>305</x>
-     <y>214</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>noise_slider_4</sender>
-   <signal>sliderMoved(int)</signal>
-   <receiver>spinBox_5</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>69</x>
-     <y>486</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>574</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tabWidget</sender>
-   <signal>currentChanged(int)</signal>
-   <receiver>noise_slider_4</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>78</x>
-     <y>451</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>103</x>
-     <y>486</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinBox_5</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>networkWidget</receiver>
-   <slot>set_noise_value(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>574</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>311</x>
-     <y>466</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pushButton_20</sender>
    <signal>clicked()</signal>
    <receiver>networkWidget</receiver>
@@ -3516,6 +3207,118 @@ QPushButton:pressed{
     <hint type="destinationlabel">
      <x>182</x>
      <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sym_check</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_symmetric(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>diag_check</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_diagonal(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>async_check</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>networkWidget</receiver>
+   <slot>toggle_asynchronous(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_1</sender>
+   <signal>clicked()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_2</sender>
+   <signal>clicked()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_0</sender>
+   <signal>clicked()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>load_example()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_save</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>make_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>335</y>
     </hint>
    </hints>
   </connection>

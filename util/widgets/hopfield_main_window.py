@@ -19,9 +19,9 @@ class HopfieldMainWindow(QMainWindow):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.networkWidget.sym_action = self.ui.action_symmetric
-        self.ui.networkWidget.diag_action = self.ui.action_diagonal
-        self.ui.networkWidget.sync_action = self.ui.action_synchronous
+        self.ui.networkWidget.sym_check = self.ui.sym_check
+        self.ui.networkWidget.diag_check = self.ui.diag_check
+        self.ui.networkWidget.async_check = self.ui.async_check
 
 
 
