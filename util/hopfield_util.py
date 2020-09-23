@@ -161,15 +161,6 @@ class HopfieldNetwork:
         self.current_y = 0
         self.remaining_indizes = []
 
-    def randomise_values(self):
-        print("randomising Values")
-        self.values = numpy.random.choice([-1, 1], self.network_size)
-
-    def clear_values(self):
-        print("clearing Values")
-        self.values = numpy.ones(self.network_size) * -1
-        self.remaining_indizes = []
-
     def noise_values(self, p=0.3):
         print("noising Values")
         mask = noise = numpy.random.choice([0, 1], self.values.shape, p=[1 - p, p]) == 1
@@ -308,9 +299,9 @@ def draw_array_to_surface(array, surface, background_color=(100, 100, 100), show
         print("Surface to small")
 '''
 
-def load_example(network, idx):
+def load_example(network : HopfieldNetwork, idx):
     if idx == 0:
-        network.clear_values()
+        network.values = numpy.ones(network.values.shape)
         network.values[network.h // 2:] *= -1
         network.weights.clear()
         network.weights.symetric = True
@@ -318,15 +309,18 @@ def load_example(network, idx):
         network.weights[:half, half:] = 1
         network.weights[half:, :half] = 1
         network.set_sync(True)
+        network.remaining_indizes = []
     elif idx == 1:
         network.weights = (numpy.random.random(network.weights.shape) - 0.5).view(NewWeightContainer)
         network.weights.symetric = False
         network.set_sync(False)
+        network.remaining_indizes = []
     elif idx == 2:
         network.weights = (numpy.eye(network.weights.shape[0]) * -1).view(NewWeightContainer)
         numpy.fill_diagonal(network.weights, -1)
         network.weights.zero_diagonal = False
         network.set_sync(False)
+        network.remaining_indizes = []
 
 
 if __name__ == "__main__":

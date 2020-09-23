@@ -134,7 +134,7 @@ class NetworkWidget(QWidget):
         QGLWidget.__init__(self, parent)
         self.steps = 0
         self.network = HopfieldNetwork(random=True)
-        self.network.randomise_values()
+        self.network.noise_values(1)
         self.network.order = 2
 
         self.mnist_handler = MNISTHandler()
@@ -181,12 +181,6 @@ class NetworkWidget(QWidget):
     def random(self):
         self.network.randomise_weights()
         self.update_save_states()
-        self.steps = 0
-        self.network.remaining_indizes = []
-        self.update()
-
-    def clear(self):
-        self.network.clear_values()
         self.steps = 0
         self.network.remaining_indizes = []
         self.update()
