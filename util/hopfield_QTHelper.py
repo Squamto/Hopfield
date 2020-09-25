@@ -88,11 +88,13 @@ class NetworkSurfaceWidget(QWidget):
         painter.begin(self)
         self.helper.draw(painter, event.rect(), self.values, self.pos)
         painter.end()
-        
+
     def save(self):
         file_type = "png"
+        now = datetime.now()
+        defaul_name = now.strftime("%d%m%Y_%H%M%S" + ".png")
         try:
-            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img", "PNG (*.png);;BMP (*.bmp);;JPG (*.jpg)", "PNG (*.png)")
+            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img/" + defaul_name, "PNG (*.png);;BMP (*.bmp);;JPG (*.jpg)", "PNG (*.png)")
             path = f[0]
             if "bmp" in f[1]:
                 file_type = "bmp"
