@@ -2452,6 +2452,7 @@ QPushButton:pressed{
      <string>File</string>
     </property>
     <addaction name="action_save"/>
+    <addaction name="action_save_as"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -2461,6 +2462,14 @@ QPushButton:pressed{
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_save_as">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
    </property>
   </action>
  </widget>
@@ -2496,11 +2505,12 @@ QPushButton:pressed{
     <slot>toggle_diagonal(bool)</slot>
     <slot>toggle_asynchronous(bool)</slot>
     <slot>load_example()</slot>
-    <slot>make_image()</slot>
     <slot>complete_iteration()</slot>
     <slot>set_draw_color(bool)</slot>
     <slot>set_draw_mode(int)</slot>
     <slot>invert()</slot>
+    <slot>save_image()</slot>
+    <slot>save_image_as()</slot>
    </slots>
   </customwidget>
   <customwidget>
@@ -3609,7 +3619,23 @@ QPushButton:pressed{
    <sender>action_save</sender>
    <signal>triggered()</signal>
    <receiver>networkWidget</receiver>
-   <slot>make_image()</slot>
+   <slot>save_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_save_as</sender>
+   <signal>triggered()</signal>
+   <receiver>networkWidget</receiver>
+   <slot>save_image_as()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>

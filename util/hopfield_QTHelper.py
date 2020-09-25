@@ -89,19 +89,22 @@ class NetworkSurfaceWidget(QWidget):
         self.helper.draw(painter, event.rect(), self.values, self.pos)
         painter.end()
 
-    def save(self):
+    def save(self, dialog = True):
         file_type = "png"
         now = datetime.now()
-        defaul_name = now.strftime("%d%m%Y_%H%M%S" + ".png")
-        try:
-            f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", "./img/" + defaul_name, "PNG (*.png);;BMP (*.bmp);;JPG (*.jpg)", "PNG (*.png)")
-            path = f[0]
-            if "bmp" in f[1]:
-                file_type = "bmp"
-            elif "jpg" in f[1]:
-                file_type = "jpg"
-        except Exception as e:
-            print(e)
+        defaul_path = "./img/" + now.strftime("%d%m%Y_%H%M%S" + ".png")
+        if dialog:
+            try:
+                f = QFileDialog.getSaveFileName(self.parent(), "FileDialog", defaul_path, "PNG (*.png);;BMP (*.bmp);;JPG (*.jpg)", "PNG (*.png)")
+                path = f[0]
+                if "bmp" in f[1]:
+                    file_type = "bmp"
+                elif "jpg" in f[1]:
+                    file_type = "jpg"
+            except Exception as e:
+                print(e)
+        else:
+            path = defaul_path
         if len(path) == 0:
             return
         m = self.helper.show_marker
@@ -196,8 +199,11 @@ class NetworkWidget(QWidget):
         self.network.remaining_indizes = []
         self.update()
 
-    def make_image(self):
-        self.surface.save()
+    def save_image(self):
+        self.surface.save(False)
+
+    def save_image_as(self):
+        self.surface.save(True)
 
     def update_save_states(self):
         self.update_save.emit()

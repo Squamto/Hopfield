@@ -797,8 +797,8 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./util/ui\\../ressources/media_play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("./util/ui\\../ressources/pause.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap("./util/ressources/media_play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./util/ressources/pause.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.pushButton.setIcon(icon)
         self.pushButton.setCheckable(True)
         self.pushButton.setChecked(False)
@@ -813,7 +813,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setFont(font)
         self.pushButton_5.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./util/ui\\../ressources/step.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./util/ressources/step.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon1)
         self.pushButton_5.setObjectName("pushButton_5")
         self.horizontalLayout_3.addWidget(self.pushButton_5)
@@ -823,7 +823,7 @@ class Ui_MainWindow(object):
         self.pushButton_6.setFont(font)
         self.pushButton_6.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("./util/ui\\../ressources/iterate.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("./util/ressources/iterate.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_6.setIcon(icon2)
         self.pushButton_6.setAutoRepeat(True)
         self.pushButton_6.setAutoRepeatInterval(300)
@@ -1014,7 +1014,10 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menuBar)
         self.action_save = QtWidgets.QAction(MainWindow)
         self.action_save.setObjectName("action_save")
+        self.action_save_as = QtWidgets.QAction(MainWindow)
+        self.action_save_as.setObjectName("action_save_as")
         self.menuFile.addAction(self.action_save)
+        self.menuFile.addAction(self.action_save_as)
         self.menuBar.addAction(self.menuFile.menuAction())
         self.label.setBuddy(self.spinBox)
 
@@ -1089,7 +1092,8 @@ class Ui_MainWindow(object):
         self.example_1.clicked.connect(self.networkWidget.load_example)
         self.example_2.clicked.connect(self.networkWidget.load_example)
         self.example_0.clicked.connect(self.networkWidget.load_example)
-        self.action_save.triggered.connect(self.networkWidget.make_image)
+        self.action_save.triggered.connect(self.networkWidget.save_image)
+        self.action_save_as.triggered.connect(self.networkWidget.save_image_as)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1138,6 +1142,8 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.action_save.setText(_translate("MainWindow", "Save"))
         self.action_save.setShortcut(_translate("MainWindow", "Ctrl+S"))
+        self.action_save_as.setText(_translate("MainWindow", "Save as..."))
+        self.action_save_as.setShortcut(_translate("MainWindow", "Ctrl+Shift+S"))
 from util.hopfield_QTHelper import NetworkWidget
 from util.widgets.hopfield_save_state_widget import SaveStateWidget
 
